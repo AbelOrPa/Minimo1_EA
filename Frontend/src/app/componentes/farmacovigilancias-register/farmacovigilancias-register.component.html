@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-md-8 order-md-1">
+      <h4 class="mb-3" style="margin-top: 30px;">Datos de la nueva unidad</h4>
+      <form class="needs-validation" novalidate [formGroup]="registro" > <!--(ngSubmit)="añadirUsuario()-->
+        
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="firstName">Nombre:</label>
+            <input #nombre type="text" class="form-control" id="nombre" placeholder="" value="" required>
+            <div class="invalid-feedback">
+              El nombre es un campo obligatorio.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="descripcion">Descripcion:</label>
+            <input #descripcion type="text" class="form-control" id="descripcion" placeholder="" value="">
+          </div>
+          <div class="mb-3" style="margin-left: 15px;">
+            <label for="responsable">Responsable:</label>
+            <div class="input-group">
+              <input #responsable type="text" class="form-control" id="resposnable" placeholder="Responsable" required>
+              <div class="invalid-feedback" style="width: 100%;">
+                El responsable es un campo obligatorio.
+              </div>
+            </div>
+          </div>
+    
+          <div class="mb-3" style="margin-left: 10px;">
+            <label for="telefono">Telefono:</label>
+            <input #telefono type="text" class="form-control" id="telefono" placeholder="93849384">
+          </div>
+  
+          
+        </div>
+        <div>
+          <button  class="btn-desa" style="border-radius: 5px; background-color: rgb(240, 243, 227);" (click)="addUnidad(nombre.value,descripcion.value,responsable.value,telefono.value)">Añadir Unidad</button> 
+      </div>
+      </form>
+    </div>
+  </div>
+  
